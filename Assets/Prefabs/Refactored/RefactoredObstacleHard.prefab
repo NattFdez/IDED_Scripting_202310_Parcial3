@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1625975584058051335}
   - component: {fileID: 1625975584058051334}
   - component: {fileID: 8796278755165757504}
+  - component: {fileID: -6942646097271826265}
   m_Layer: 9
   m_Name: RefactoredObstacleHard
   m_TagString: Untagged
@@ -129,3 +130,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layerToCollideWith: 8
   hp: 3
+--- !u!114 &-6942646097271826265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625975584058051328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30e09cc035cd3904d99cf34a4f0d51d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

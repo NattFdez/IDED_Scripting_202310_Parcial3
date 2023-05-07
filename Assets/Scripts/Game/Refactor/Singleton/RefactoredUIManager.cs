@@ -1,6 +1,21 @@
 public class RefactoredUIManager : UIManagerBase
 {
-    protected override PlayerControllerBase PlayerController => throw new System.NotImplementedException();
+    public static RefactoredUIManager instance;
+    
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(this);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+    
+    protected override PlayerControllerBase PlayerController => RefactoredPlayerController.instance;
 
-    protected override GameControllerBase GameController => throw new System.NotImplementedException();
+    protected override GameControllerBase GameController => RefactoredGameController.instance;
 }
