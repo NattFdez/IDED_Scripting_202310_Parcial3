@@ -4,7 +4,7 @@ using UnityEngine;
 public class PoolableObject : MonoBehaviour
 {
     [SerializeField] private float duration = 2f;
-    private PoolBase pool;
+    public PoolBase pool { get; private set; }
     private Coroutine delayed;
 
     private void OnEnable()

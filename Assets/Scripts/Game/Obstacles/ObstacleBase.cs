@@ -35,11 +35,11 @@ public abstract class ObstacleBase : MonoBehaviour
             int collisionLayer = collision.gameObject.layer;
             if (collision.collider.TryGetComponent(out PoolableObject poolableObject))
             {
-                poolableObject.RecycleObject();
-            }
-            else
-            {
-                Destroy(collision.gameObject);
+                if(poolableObject.pool != null) poolableObject.RecycleObject();
+                else
+                {
+                    Destroy(collision.gameObject);
+                }
             }
 
             if (collisionLayer.Equals(LayerMask.NameToLayer(GameUtils.BULLET_HARD_LAYER_NAME)))
